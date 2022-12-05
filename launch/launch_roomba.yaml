@@ -3,16 +3,17 @@ launch:
     name: "ros_resord" 
     default: "false"
 
-# Talker Node
+# Walker Node
 - node:
     pkg: "roomba"
     exec: "walk"
     name: "walker"
 
+# Burger Bot export
 - executable:
     cmd: "export TURTLEBOT3_MODEL=burger"
 
-# Listner Node
+# TurtleBot launch
 - include:
     file: "$(find-pkg-share turtlebot3_gazebo)/launch/turtlebot3_dqn_stage4.launch.py"
 

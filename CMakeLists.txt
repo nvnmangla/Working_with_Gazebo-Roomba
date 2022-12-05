@@ -27,7 +27,8 @@ if(BUILD_TESTING)
   #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-add_executable(walk src/roombaTemp.cpp)
+include_directories(include)
+add_executable(walk src/roomba.cpp)
 
 ament_target_dependencies(walk rclcpp std_msgs tf2 tf2_ros turtlebot3_gazebo)
 
