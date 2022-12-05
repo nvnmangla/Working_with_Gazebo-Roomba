@@ -1,0 +1,23 @@
+launch:
+- arg: 
+    name: "ros_resord" 
+    default: "false"
+
+# Walker Node
+- node:
+    pkg: "roomba"
+    exec: "walk"
+    name: "walker"
+
+# Burger Bot export
+- executable:
+    cmd: "export TURTLEBOT3_MODEL=burger"
+
+# TurtleBot launch
+- include:
+    file: "$(find-pkg-share turtlebot3_gazebo)/launch/turtlebot3_dqn_stage4.launch.py"
+
+# Ros2 Rocorder Node
+- executable:
+     cmd: "ros2 bag record -a --output ../results/bag/" 
+     if: $(var ros_record)
