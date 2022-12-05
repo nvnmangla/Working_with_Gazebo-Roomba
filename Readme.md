@@ -36,7 +36,7 @@ ros2 run roomba walk
 Make sure you have  installed turtlebot3 and you are not i conda enviornment 
 
 ### Launch File
-To launch nodes using launch file and pass parameters using command line:
+To launch, Run the following commands:
 ```
 cd <ROS2_ws>/src/roomba/launch
 ```
